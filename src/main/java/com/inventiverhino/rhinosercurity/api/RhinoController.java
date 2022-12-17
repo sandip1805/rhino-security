@@ -1,7 +1,6 @@
 package com.inventiverhino.rhinosercurity.api;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -12,8 +11,8 @@ public class RhinoController {
         return "Hello Rhino!";
     }
 
-    @GetMapping("/{name}")
-    public String greetPrivately(@PathVariable String name) {
-        return "Hello " + name;
+    @GetMapping("/private")
+    public String greetPrivately() {
+        return "Hello from Secret Alien planet...";
     }
 }
